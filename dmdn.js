@@ -8,16 +8,22 @@
 
 
 function fastShare(info, tab) {
-  console.log(info.srcUrl);
+
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", "http://www.dasmerkendienie.com/api.php", true);
+  xhr.open("POST", "http://www.dasmerkendienie.com/", true);
   xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4) {
   	console.log(xhr);
     }
   }
-  xhr.send("action=save&data="+info.srcUrl+"&media="+info.srcUrl);
+  var data = new Object();
+  data.type="img";
+  data.url=info.srcUrl;
+  chrome.storage.sync.get("api", function(items) {
+    xhr.send("api_key="+items.api+"&content=&metadata="+encodeURIComponent(JSON.stringify(data)));
+  });
+
 }
 
 
@@ -28,14 +34,19 @@ function AskShare(info, tab) {
   {
   console.log(info.srcUrl);
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", "http://www.dasmerkendienie.com/api.php", true);
+  xhr.open("POST", "http://www.dasmerkendienie.com/", true);
   xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4) {
   	console.log(xhr);
     }
   }
-  xhr.send("action=save&data="+hash+"&media="+info.srcUrl);
+  var data = new Object();
+  data.type="img";
+  data.url=info.srcUrl;
+  chrome.storage.sync.get("api", function(items) {
+    xhr.send("api_key="+items.api+"&content="+hash+"&metadata="+encodeURIComponent(JSON.stringify(data)));
+  });
   }
 }
 
