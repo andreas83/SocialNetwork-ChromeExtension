@@ -21,7 +21,7 @@
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyX93X+R/T7+TJZF2lf+U087pI0nu+lwQBcjdFEVAOmBYZiBjcBo3nlGhEwbkccFN7iwrdLVd1t2TABiCSJRx5OSUrCqWqFIn4loaCYVDqR4zgUVVxJgrZMVr1w7ML6+1dEb49tLhZ8fFX3ZFL9FHHk9PGALjCXk7OxZ0R3cnnVQguRiUGtqWOHAtCsDr4frTqDDzkiakvkEEr/JovhuBAAo+nZqhWBOEzM/EAmrKL6uk7K/9dorpcSbpN6ToI7t36ACnyGNcgaJp1TyBpLiYpK9lS+AgR3BYv0M6hyamsf712SuHeZiZj6gVktrFIfRoFege8BfKEXgpgaDLpvtJTQIDAQAB",
    "manifest_version": 2,
    "name": "Das merken die nie",
-   "permissions": [ "storage", "contextMenus", "http://*.dasmerkendienie.com/" , "http://dmdn/"],
+   "permissions": [ "storage", "alarms", "notifications", "contextMenus", "http://*.dasmerkendienie.com/" , "http://dmdn/"],
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "0.7"
 }
