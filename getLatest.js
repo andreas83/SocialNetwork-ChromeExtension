@@ -10,7 +10,7 @@
 		if(resp[key].stream.type == "img")
 		{
 		var img = document.createElement('img');
-		img.src = "http://www.dasmerkendienie.com"+resp[key].stream.url;
+		img.src = resp[key].stream.url;
 		img.width = 200;
 
 		document.getElementById('container').appendChild(img);
